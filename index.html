@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page - JavaScript Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <button class="theme-toggle" id="themeToggle">Toggle Theme</button>
+            <h1>Interactive Web Page Assignment</h1>
+            <p>JavaScript Event Handling, Interactive Elements & Form Validation</p>
+        </div>
+
+        <!-- Part 1: Event Handling Demo -->
+        <div class="section-card">
+            <h2 class="section-title">Part 1: Event Handling Demo</h2>
+            <p>Hover over buttons, click them, and see different events in action!</p>
+            
+            <div class="interactive-grid">
+                <div class="interactive-item">
+                    <h3>Click Counter</h3>
+                    <div class="counter-display" id="clickCounter">0</div>
+                    <div class="counter-buttons">
+                        <button class="btn btn-primary" id="incrementBtn">+1</button>
+                        <button class="btn btn-danger" id="decrementBtn">-1</button>
+                        <button class="btn btn-warning" id="resetBtn">Reset</button>
+                    </div>
+                </div>
+                
+                <div class="interactive-item">
+                    <h3>Hover Effect</h3>
+                    <div class="hover-box" id="hoverBox">
+                        Hover me! 
+                    </div>
+                    <p id="hoverStatus">Status: Ready</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part 2: Interactive Elements -->
+        <div class="section-card">
+            <h2 class="section-title">Part 2: Interactive Components</h2>
+            
+            <!-- FAQ Section -->
+            <div style="margin-bottom: 40px;">
+                <h3>Collapsible FAQ</h3>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What is JavaScript?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            JavaScript is a versatile programming language that makes web pages interactive. It can respond to user events, manipulate HTML content, and create dynamic user experiences.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do event listeners work?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Event listeners "listen" for specific user actions (like clicks, hovers, keyboard input) and execute JavaScript functions in response. They're the bridge between user interaction and code execution.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Why is form validation important?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Form validation ensures users submit correct, complete information while providing immediate feedback. It improves user experience and prevents invalid data from being processed.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabbed Interface -->
+            <div>
+                <h3>Tabbed Content Interface</h3>
+                <div class="tab-container">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="html">HTML</button>
+                        <button class="tab-btn" data-tab="css">CSS</button>
+                        <button class="tab-btn" data-tab="javascript">JavaScript</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="html">
+                            <h4>HTML (Structure)</h4>
+                            <p>HTML provides the structure and content of web pages. It uses tags to define elements like headings, paragraphs, forms, and more. Think of it as the skeleton of your website.</p>
+                            <ul>
+                                <li>Semantic markup for accessibility</li>
+                                <li>Form elements for user input</li>
+                                <li>Links and navigation</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane" id="css">
+                            <h4>CSS (Styling)</h4>
+                            <p>CSS controls the visual presentation of HTML elements. It handles colors, layouts, fonts, animations, and responsive design. It's what makes websites look beautiful and professional.</p>
+                            <ul>
+                                <li>Responsive grid and flexbox layouts</li>
+                                <li>Smooth transitions and animations</li>
+                                <li>Theme switching with CSS variables</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane" id="javascript">
+                            <h4>JavaScript (Interactivity)</h4>
+                            <p>JavaScript adds behavior and interactivity to web pages. It can respond to user actions, validate forms, make API calls, and dynamically update content without page reloads.</p>
+                            <ul>
+                                <li>Event handling for user interactions</li>
+                                <li>DOM manipulation for dynamic content</li>
+                                <li>Form validation and data processing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part 3: Form Validation -->
+        <div class="section-card">
+            <h2 class="section-title">Part 3: Advanced Form Validation</h2>
+            <p>Fill out the form below. JavaScript will validate each field as you type and when you submit!</p>
+            
+            <div class="alert alert-success" id="successAlert">
+                 Form submitted successfully! All validation passed.
+            </div>
+            
+            <form id="validationForm" novalidate>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" class="form-input" required>
+                        <div class="error-message" id="firstNameError"></div>
+                        <div class="success-message" id="firstNameSuccess">✓ Looks good!</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" class="form-input" required>
+                        <div class="error-message" id="lastNameError"></div>
+                        <div class="success-message" id="lastNameSuccess">✓ Looks good!</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" class="form-input" required>
+                        <div class="error-message" id="emailError"></div>
+                        <div class="success-message" id="emailSuccess">✓ Valid email format!</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" class="form-input" placeholder="(123) 456-7890" required>
+                        <div class="error-message" id="phoneError"></div>
+                        <div class="success-message" id="phoneSuccess">✓ Valid phone number!</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password *</label>
+                        <input type="password" id="password" class="form-input" required>
+                        <div class="error-message" id="passwordError"></div>
+                        <div class="success-message" id="passwordSuccess">✓ Strong password!</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password *</label>
+                        <input type="password" id="confirmPassword" class="form-input" required>
+                        <div class="error-message" id="confirmPasswordError"></div>
+                        <div class="success-message" id="confirmPasswordSuccess">✓ Passwords match!</div>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success">Submit Form</button>
+                    <button type="button" class="btn btn-warning" id="clearForm">Clear All</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
